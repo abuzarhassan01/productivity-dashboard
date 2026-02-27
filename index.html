@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Personal Productivity Web App</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="container header-flex">
+
+<h1 class="logo">🚀 Productivity App</h1>
+
+<button onclick="toggleTheme()">🌙 Toggle Theme</button>
+
+</div>
+
+</header>
+
+
+<main class="container">
+
+
+<!-- ADD TASK -->
+
+<div class="card">
+
+<h2>➕ Add Task</h2>
+
+<div class="task-input">
+
+<input 
+type="text" 
+id="taskInput" 
+placeholder="Write a new task..."
+autocomplete="off"
+>
+
+<select id="categoryInput">
+
+<option value="Work">Work</option>
+<option value="Study">Study</option>
+<option value="Personal">Personal</option>
+
+</select>
+
+<button onclick="addTask()">Add</button>
+
+</div>
+
+</div>
+
+
+
+<!-- FILTER -->
+
+<div class="card">
+
+<h2>🔍 Filter</h2>
+
+<select onchange="filterTasks(this.value)">
+
+<option value="all">All</option>
+<option value="completed">Completed</option>
+<option value="pending">Pending</option>
+
+</select>
+
+</div>
+
+
+
+<!-- PROGRESS -->
+
+<div class="card">
+
+<h2>📊 Progress</h2>
+
+<div class="progress-bar">
+
+<div id="progressFill"></div>
+
+</div>
+
+<p id="progressText">0/0 Completed</p>
+
+</div>
+
+
+
+<!-- GAMIFICATION -->
+
+<div class="card">
+
+<h2>🎮 Gamification</h2>
+
+<p>Level: <span id="level">1</span></p>
+
+<p>XP: <span id="xp">0</span>/100</p>
+
+<div class="progress-bar">
+
+<div id="xpBar"></div>
+
+</div>
+
+</div>
+
+
+
+<!-- TASK LIST -->
+
+<div class="card">
+
+<h2>✅ Tasks</h2>
+
+<ul id="taskList"></ul>
+
+</div>
+
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
