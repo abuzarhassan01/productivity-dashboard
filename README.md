@@ -20,4 +20,4 @@ Just open index.html in browser.
 
 ## Author
 
-Abuzar Hassan
+Abuzar Hassan.
