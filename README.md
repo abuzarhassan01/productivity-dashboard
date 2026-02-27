@@ -18,6 +18,6 @@ A modern productivity dashboard built using:
 
 Just open index.html in browser.
 
-## Author
+#Author
 
 Abuzar Hassan.
