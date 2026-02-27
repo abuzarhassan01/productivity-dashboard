@@ -132,35 +132,37 @@ return true;
 
 });
 
-filtered.forEach(task=>{
-
-let li=document.createElement("li");
-
-li.innerHTML=`
-
-<div class="task-left">
-
-<input type="checkbox"
-
-${task.completed?"checked":""}
-
-onchange="toggleTask(${task.id})">
-
-<span class="${task.completed?"completed":""}">
-
-${task.text} (${task.category})
-
-</span>
-
-</div>
-
-<button onclick="deleteTask(${task.id})">Delete</button>
-
-`;
-
-list.appendChild(li);
-
-});
+    filtered.forEach(task=>{
+    
+    let li=document.createElement("li");
+    
+    li.innerHTML=`
+    
+    <div class="task-left">
+    
+    <input type="checkbox"
+    
+    ${task.completed?"checked":""}
+    
+    onchange="toggleTask(${task.id})">
+    
+    <span class="task-title ${task.completed?"completed":""}">
+    
+    ${task.text}
+    
+    </span>
+    
+    <span class="task-tag">${task.category}</span>
+    
+    </div>
+    
+    <button onclick="deleteTask(${task.id})">Delete</button>
+    
+    `;
+    
+    list.appendChild(li);
+    
+    });
 
 updateProgress();
 
