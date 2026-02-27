@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Personal Productivity Web App</title>
+<title>Personal Productivity App</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -19,9 +19,9 @@
 
 <div class="container header-flex">
 
-<h1 class="logo">🚀 Productivity App</h1>
+<h1 class="logo">🚀 Productivity</h1>
 
-<button onclick="toggleTheme()">🌙 Toggle Theme</button>
+<button class="theme-btn" onclick="toggleTheme()">🌙</button>
 
 </div>
 
@@ -35,14 +35,14 @@
 
 <div class="card">
 
-<h2>➕ Add Task</h2>
+<h2>Add Task</h2>
 
 <div class="task-input">
 
 <input 
-type="text" 
-id="taskInput" 
-placeholder="Write a new task..."
+type="text"
+id="taskInput"
+placeholder="Write your task..."
 autocomplete="off"
 >
 
@@ -61,16 +61,15 @@ autocomplete="off"
 </div>
 
 
-
 <!-- FILTER -->
 
 <div class="card">
 
-<h2>🔍 Filter</h2>
+<h2>Filter</h2>
 
-<select onchange="filterTasks(this.value)">
+<select onchange="filterTasks(this.value)" class="full-width">
 
-<option value="all">All</option>
+<option value="all">All Tasks</option>
 <option value="completed">Completed</option>
 <option value="pending">Pending</option>
 
@@ -79,12 +78,11 @@ autocomplete="off"
 </div>
 
 
-
 <!-- PROGRESS -->
 
 <div class="card">
 
-<h2>📊 Progress</h2>
+<h2>Progress</h2>
 
 <div class="progress-bar">
 
@@ -92,17 +90,16 @@ autocomplete="off"
 
 </div>
 
-<p id="progressText">0/0 Completed</p>
+<p id="progressText"></p>
 
 </div>
-
 
 
 <!-- GAMIFICATION -->
 
 <div class="card">
 
-<h2>🎮 Gamification</h2>
+<h2>Gamification</h2>
 
 <p>Level: <span id="level">1</span></p>
 
@@ -117,12 +114,11 @@ autocomplete="off"
 </div>
 
 
-
 <!-- TASK LIST -->
 
 <div class="card">
 
-<h2>✅ Tasks</h2>
+<h2>Tasks</h2>
 
 <ul id="taskList"></ul>
 
@@ -134,4 +130,5 @@ autocomplete="off"
 <script src="script.js"></script>
 
 </body>
+
 </html>
